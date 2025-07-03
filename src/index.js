@@ -9,8 +9,8 @@ import AreaOfActivity from './pages/AreaOfActivity/AreaOfActivity';
 import Website from './pages/Website/Website';
 import DirLukoil from './pages/DirLukoil/DirLukoil';
 import ManRitec from './pages/ManRitec/ManRitec';
-import Concern from './pages/Concern/Concern';
-import TppVolga from './pages/TppVolga/TppVolga';
+import FirstLvlCont from './pages/FirstLvlCont/FirstLvlCont';
+import SecondLvlCont from './pages/SecondLvlCont/SecondLvlCont';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -48,14 +48,13 @@ const router = createBrowserRouter([
         element: <ManRitec />,
     },
     {
-        path: '/concern',
-        element: <Concern />,
+        path: '/first-lvl-cont/:id',
+        element: <FirstLvlCont />,
     },
     {
-        path: '/volga',
-        element: <TppVolga />,
+        path: '/second-lvl-cont',
+        element: <SecondLvlCont />,
     },
-
 ]);
 root.render(<RouterProvider router={router} />);
 

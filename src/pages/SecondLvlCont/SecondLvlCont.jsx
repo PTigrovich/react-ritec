@@ -1,12 +1,12 @@
-import styles from './TppVolga.module.scss';
+import styles from './SecondLvlCont.module.scss';
 import BackButton from '../../components/BackButton/BackButton';
 import { useNavigate } from 'react-router-dom';
 
-function TppVolga() {
+function SecondLvlCont() {
     const navigate = useNavigate();
 
     const handleClickBack = () => {
-        navigate('/concern');
+        navigate('/first-lvl-cont');
     };
 
     return (
@@ -40,4 +40,4 @@ function TppVolga() {
         </div>
     );
 }
-export default TppVolga;
+export default SecondLvlCont;

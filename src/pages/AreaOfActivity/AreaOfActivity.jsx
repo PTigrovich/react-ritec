@@ -1,18 +1,42 @@
 import styles from './AreaOfActivity.module.scss';
-import Button from '../../components/Button/Button'
+import Button from '../../components/Button/Button';
 import BackButton from '../../components/BackButton/BackButton';
 import { useNavigate } from 'react-router-dom';
 
 function AreaOfActivity() {
-
-	const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleClickMain = () => {
         navigate('/');
     };
-	 const handleClickConcern = () => {
-         navigate('/concern');
-     };
+	 
+    const handleClickConcern = () => {
+        navigate('/first-lvl-cont/1');
+    };
+    const handleClickNo = () => {
+        navigate('/first-lvl-cont/2');
+    };
+    const handleClickCharity = () => {
+        navigate('/first-lvl-cont/3');
+    };
+    const handleClickScience = () => {
+        navigate('/first-lvl-cont/4');
+    };
+    const handleClickMaster = () => {
+        navigate('/first-lvl-cont/5');
+    };
+    const handleClickSocial = () => {
+        navigate('/first-lvl-cont/6');
+    };
+    const handleClickEco = () => {
+        navigate('/first-lvl-cont/7');
+    };
+    const handleClickSecurity = () => {
+        navigate('/first-lvl-cont/8');
+    };
+    const handleClickLife = () => {
+        navigate('/first-lvl-cont/9');
+    };
 
     return (
         <div className={styles.background}>
