@@ -9,7 +9,7 @@ function AreaOfActivity() {
     const handleClickMain = () => {
         navigate('/');
     };
-	 
+
     const handleClickConcern = () => {
         navigate('/first-lvl-cont/1');
     };
@@ -42,14 +42,14 @@ function AreaOfActivity() {
         <div className={styles.background}>
             <div className={styles.buttonColumn}>
                 <Button className={styles.button} text={'региональные \n предприятия'} onClick={handleClickConcern} />
-                <Button className={`${styles.button} ${styles.logoButton}`} />
-                <Button className={styles.button} text={'благотворительность'} />
-                <Button className={styles.button} text={'наука'} />
-                <Button className={styles.button} text={'конкурс \n профессионального \n мастерства'} />
-                <Button className={styles.button} text={'конкурс \n социальных и \n культурных прроектов'} />
-                <Button className={styles.button} text={'экология'} />
-                <Button className={styles.button} text={'промышленная \n безопасность'} />
-                <Button className={styles.button} text={'профсоюзная жизнь'} />
+                <Button className={`${styles.button} ${styles.logoButton}`} onClick={handleClickNo} />
+                <Button className={styles.button} text={'благотворительность'} onClick={handleClickCharity} />
+                <Button className={styles.button} text={'наука'} onClick={handleClickScience} />
+                <Button className={styles.button} text={'конкурс \n профессионального \n мастерства'} onClick={handleClickMaster} />
+                <Button className={styles.button} text={'конкурс \n социальных и \n культурных прроектов'} onClick={handleClickSocial} />
+                <Button className={styles.button} text={'экология'} onClick={handleClickEco} />
+                <Button className={styles.button} text={'промышленная \n безопасность'} onClick={handleClickSecurity} />
+                <Button className={styles.button} text={'профсоюзная жизнь'} onClick={handleClickLife} />
             </div>
             <BackButton className={styles.backButton} onClick={handleClickMain} />
         </div>

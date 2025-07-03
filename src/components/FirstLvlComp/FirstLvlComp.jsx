@@ -1,44 +1,36 @@
-import styles from './FirstLvlCont.module.scss';
+import styles from './FirstLvlComp.module.scss';
 import Button from '../Button/Button';
-import BackButton from '../BackButton/BackButton';
 import { useNavigate } from 'react-router-dom';
 
-function FirstLvlComp({ data = [] }) {
+function FirstLvlComp({ item }) {
     const navigate = useNavigate();
 
-    const handleClickMain = () => {
-        navigate('/area-of-activity');
-    };
-    const handleClickVolg = () => {
-        navigate('/second-lvl-cont');
-    };
-    const handleClickTat = () => {
-        navigate('/tat');
-    };
-    const handleClickSama = () => {
-        navigate('/samara');
-    };
+    if (!item) return null;
 
     return (
         <div className={styles.background}>
             <div className={styles.content}>
                 <div className={styles.textColumn}>
-                    {data.map((item, index) => (
-                        <div key={index}>{item}</div>
-                    ))}
+                    <h2>{item.title1}</h2>
+                    <h3>{item.title2}</h3>
+                    <p>
+                        <span className={styles.invSpace}>g </span>
+                        {item.description}
+                    </p>
                 </div>
+
                 <div className={styles.buttonColumn}>
-                    {data.map((item, index) => (
-                        <Button className={styles.button} key={index} />
+                    {item.buttons.map((button, index) => (
+                        <Button key={index} className={styles.button} onClick={() => navigate(button.path)} text={button.text} />
                     ))}
                 </div>
             </div>
+
             <div className={styles.imageBlock}>
-                {data.map((item, index) => (
-                    <img className={styles.image} src="/images/background.jpg" alt="фото" />
-                ))}
+                <img className={styles.image} src={item.image.src} alt={item.image.alt} />
             </div>
         </div>
     );
 }
+
 export default FirstLvlComp;
