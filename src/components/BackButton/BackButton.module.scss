@@ -1,0 +1,52 @@
+.base {
+	height: 70px;
+	width: 200px;
+	border: none;
+	border-radius: 11px;
+	background-color:rgb(228, 231, 235);
+	// opacity: 0.7;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+	cursor:  pointer;
+	transition: background-color 0.3s ease; // Плавное изменение яркости
+
+	&:active {
+		background-color: rgba(4, 4, 4, 0.25); // Затемнение при нажатии 
+	 }
+}
+
+// Темная версия кнопки
+.red {
+	background-color: rgb(204, 44, 44); // Красный фон
+	
+	&:hover {
+		 background-color: darken(rgb(204, 44, 44), 10%);
+	}
+	
+	&:active {
+		 background-color: darken(rgb(204, 44, 44), 15%);
+	}
+}
+
+.blue {
+	background-color: rgb(2, 139, 189); // Новый синий вариант
+	
+	&:hover {
+		 background-color: darken(rgb(2, 139, 189), 10%);
+	}
+	
+	&:active {
+		 background-color: darken(rgb(2, 139, 189), 15%);
+	}
+}
+
+.icon {
+	width: 170px;  /* Увеличиваем ширину */
+	height: 100px; /* Фиксированная высота */
+	object-fit: fill; /* Растягивает изображение с искажением */
+  }

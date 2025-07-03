@@ -1,0 +1,76 @@
+.background {
+	min-height: 100vh;
+	width: 100vw;
+	background-image: url('../../assets/background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex; 
+	flex-direction: column
+ }
+
+ .logoWrapper {
+	 
+	 height: 230px;
+	//  background-color: rgb(65, 188, 84);
+	//  opacity: 0.5;
+ }
+
+ .titleWrapper {
+
+	 height: 200px;
+	 // background-color: rgb(183, 160, 44);
+	 // opacity: 0.5;
+
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 text-align: center;
+
+	 padding-top: 20px;
+
+	 h2 {
+		 color:rgb(23, 139, 221);
+		 font-size: 65px;
+		 font-weight:700;
+	 }
+ }
+
+ .buttonWrapper {
+	 width: 100%;
+	 height: 100%;
+	 // background-color: rgb(183, 69, 44);
+	 // opacity: 0.5;
+
+	 display: flex;
+	 flex-direction: column;
+	//  justify-content: center;
+	 align-items: center;
+	 flex-grow: 1;
+	 padding-top: 40px;
+
+	 .buttonColumn {
+		 display:flex;
+		 flex-direction: row;
+		 justify-content: center;
+		 align-items: center;
+		 flex-wrap: wrap;
+		 width: 1500px;
+		 row-gap: 50px;
+		 column-gap: 120px;
+		 padding-top: 50px;
+	 }
+ }
+
+ .buttonWrapper .button {
+	font-size: 30px; /* Пример размера */
+	font-weight: 600;
+	white-space: pre-line;
+	color: rgb(23, 139, 221);
+}
+
+
+.button{
+	padding-left: 160px;	
+}

@@ -1,0 +1,141 @@
+.background {
+	min-height: 100vh;
+	width: 100vw;
+	background-color: rgb(51, 118, 189);;
+	display: flex;
+	flex-direction: column;
+	/* Убираем все margin/padding у body */
+	margin: 0;
+	padding: 0;
+	position:relative;
+	overflow-x: hidden;
+ }
+ 
+ .contentWrapper {
+	flex-grow: 1; /* Главный растягивающийся элемент */
+	display: flex;
+	min-height: 0; /* Критически важно для flex-потомков */
+	padding: 15vh 50px 0 50px;
+	// background-color: rgb(132, 218, 133);
+	
+ }
+ 
+ .imageConteiner {
+	flex: 0 0 30%; /* Фиксированная ширина без сжатия/растяжения */
+	min-height: 0; /* Разрешаем уменьшение */
+	display: flex;
+ }
+ 
+ .itemImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	/* Убираем все ограничения max-height */
+ }
+ 
+ .textWrapper {
+	flex: 1; /* Занимает оставшееся пространство */
+	min-height: 0; /* Разрешаем уменьшение */
+	overflow-y: auto;
+	background-color: rgb(248, 249, 249);
+	padding: 0 20px;
+
+	h2 {
+		color:rgb(51, 118, 189);
+		font-size: 50px;
+		font-weight: 900;
+	}
+	h3{
+		color:rgb(51, 118, 189);
+		margin-top:5px;
+		font-size: 30px;
+		font-weight: 900;
+	}
+	.itemText{
+		margin-top: 20px;
+		color:rgb(36, 35, 35);
+		font-size: 18px;
+		font-weight: 550;
+
+		line-height: 1.1; // Общий межстрочный интервал
+  
+      br {
+			display: block; // Превращаем <br> в блочный элемент
+			content: ""; // Добавляем пустое содержимое
+			margin-bottom: 1em; // Отступ после каждого <br>
+		 }
+	}
+	
+ }
+ 
+ .buttonsContainer {
+	height: 15vh;
+	// background-color: rgb(186, 119, 195);
+	// opacity: 0.5;
+	display: flex; 
+	gap: 100px;
+	align-items: center; 
+	justify-content: flex-end; 
+	padding: 0px 50px;
+ }
+ .mediaButton {
+	height: 100px;
+	width: 350px;
+	display: flex;
+	font-weight: 600; // Исправлено с 400 на 600 (было противоречие)
+	align-items: center; 
+	justify-content: center; 
+	background-color: rgb(228, 231, 235);
+	color: rgb(51, 118, 189);
+	font-size: 20px;
+	margin: 0 10px; // Перенесено из дублирующего объявления
+}
+
+ .backButton{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+ }
+
+ .videoModal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: auto;
+ }
+ 
+ .videoContainer {
+	width: 90%;
+	max-width: 1200px;
+	position: relative;
+ }
+ 
+ .videoPlayer {
+	width: 100%;
+	height: auto;
+	max-height: 90vh;
+ }
+ 
+ .closeButton {
+	position: absolute;
+	top: -40px;
+	right: 0;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 5px 15px;
+	pointer-events: auto;
+    z-index: 1001;
+ }
+ 
+ 
